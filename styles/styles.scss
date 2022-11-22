@@ -32,11 +32,10 @@ $text-light: #909090;
     color: $text-color;
 
     &_header {
-        font-size: 1.25rem;
+            font-size: 2.5rem;
     }
 
     &_content {
-
 
         form {
             // CONVERT THIS TO GRID
@@ -72,9 +71,6 @@ $text-light: #909090;
         }
     }
 
-    &_footer {
-        
-    }
 }
 
 .background-image {

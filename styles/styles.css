@@ -27,7 +27,7 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
   color: #202020;
 }
 .form_header {
-  font-size: 1.25rem;
+  font-size: 2.5rem;
 }
 .form_content form {
   display: flex;
@@ -56,6 +56,7 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
   margin-bottom: 2.5rem;
   outline: 1.25px solid #8cd7ff;
 }
+
 .background-image {
   width: 25%;
   height: 100%;
