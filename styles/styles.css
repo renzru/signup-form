@@ -45,6 +45,8 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
 .form_content form input {
   margin-top: 0.25rem;
   margin-bottom: 1.25rem;
+  padding: 0.25rem 0.5rem;
+  height: 1.5rem;
   background-color: #f4f4f4;
   border: none;
   transition: all 0.1s ease-in-out;
