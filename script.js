@@ -3,23 +3,23 @@ let inputFields = document.querySelectorAll('input');
 inputFields.forEach(input => {
     input.addEventListener('focus', validateInput);
     input.addEventListener('blur', validateInput);
-    input.addEventListener('change', validateInput);
+    input.addEventListener('keypress', validateInput);
 });
 
+
 function validateInput(e) {
-    let inputLength = e.target.value.trim().length;
-    let inputValid = e.target.checkValidity();
+    let inputLength = this.value.trim().length;
+    let inputValid = this.checkValidity();
 
     if (inputLength === 0) {
-        e.target.classList.remove('validBlur');
-        e.target.classList.remove('invalidBlur');
+        this.classList.remove('validBlur');
+        this.classList.remove('invalidBlur');
     }
-
     if (inputValid === true && inputLength > 0) {
-        e.target.classList.remove('invalidBlur');
-        e.target.classList.add('validBlur');
+        this.classList.remove('invalidBlur');
+        this.classList.add('validBlur');
     } else if (inputValid === false && inputLength > 0) {
-        e.target.classList.remove('validBlur');
-        e.target.classList.add('invalidBlur');
+        this.classList.remove('validBlur');
+        this.classList.add('invalidBlur');
     }
 }

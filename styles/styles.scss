@@ -60,12 +60,16 @@ $text-light: #909090;
                 height: 1.5rem;
                 background-color: #f4f4f4;
                 border: none;
-                transition: all 0.1s ease-in-out;
+                transition: all 0.1s ease-in-out, outline 0.25s ease-in-out;
             }
 
             input:focus {
                 transform: scale(1.025);
                 margin-bottom: 2.5rem;
+                outline: 1.25px solid #8cd7ff;
+            }
+
+            .onFocus {
                 outline: 1.25px solid #8cd7ff;
             }
 
