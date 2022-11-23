@@ -8,17 +8,17 @@ inputFields.forEach(input => {
 
 function validateInput(e) {
 
-    if (e.target.value.length === 0) {
+    if (e.target.value.trim().length === 0) {
         e.target.classList.remove('validBlur');
         e.target.classList.remove('invalidBlur');
     }
 
-    if (e.target.checkValidity() === true && e.target.value.length > 0) {
+    if (e.target.checkValidity() === true && e.target.value.trim().length > 0) {
         e.target.classList.remove('invalidBlur');
         e.target.classList.add('validBlur');
     }
 
-    if (e.target.checkValidity() === false && e.target.value.length > 0) {
+    if (e.target.checkValidity() === false && e.target.value.trim().length > 0) {
         e.target.classList.remove('validBlur');
         e.target.classList.add('invalidBlur');
     }
