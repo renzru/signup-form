@@ -56,9 +56,24 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
   margin-bottom: 2.5rem;
   outline: 1.25px solid #8cd7ff;
 }
+.form_content form .validBlur {
+  outline: 1.25px solid #8cffc5;
+}
+.form_content form .invalidBlur {
+  outline: 1.25px solid #ff8c9b;
+}
+.form_content form input:valid {
+  outline-color: #8cffc5;
+}
+.form_content form input:valid input {
+  outline: 1.25px solid #8cffc5;
+}
+.form_content form input:invalid {
+  outline-color: #ff8c9b;
+}
 
 .background-image {
-  width: 25%;
+  width: 30%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
