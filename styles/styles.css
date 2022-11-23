@@ -65,9 +65,6 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
 .form_content form input:valid {
   outline-color: #8cffc5;
 }
-.form_content form input:valid input {
-  outline: 1.25px solid #8cffc5;
-}
 .form_content form input:invalid {
   outline-color: #ff8c9b;
 }
