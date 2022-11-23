@@ -7,18 +7,18 @@ inputFields.forEach(input => {
 });
 
 function validateInput(e) {
+    let inputLength = e.target.value.trim().length;
+    let inputValid = e.target.checkValidity();
 
-    if (e.target.value.trim().length === 0) {
+    if (inputLength === 0) {
         e.target.classList.remove('validBlur');
         e.target.classList.remove('invalidBlur');
     }
 
-    if (e.target.checkValidity() === true && e.target.value.trim().length > 0) {
+    if (inputValid === true && inputLength > 0) {
         e.target.classList.remove('invalidBlur');
         e.target.classList.add('validBlur');
-    }
-
-    if (e.target.checkValidity() === false && e.target.value.trim().length > 0) {
+    } else if (inputValid === false && inputLength > 0) {
         e.target.classList.remove('validBlur');
         e.target.classList.add('invalidBlur');
     }
