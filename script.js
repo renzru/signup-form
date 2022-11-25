@@ -1,6 +1,7 @@
 let inputFields = document.querySelectorAll('input');
 
 inputFields.forEach(input => {
+    input.addEventListener('change', validateInput);
     input.addEventListener('focus', validateInput);
     input.addEventListener('blur', () => {
         validateInput;
@@ -20,9 +21,11 @@ function validateInput() {
     }
     if (inputValid === true && inputLength > 0) {
         this.classList.remove('invalidBlur');
+        this.classList.remove('onFocus');
         this.classList.add('validBlur');
     } else if (inputValid === false && inputLength > 0) {
         this.classList.remove('validBlur');
+        this.classList.remove('onFocus');
         this.classList.add('invalidBlur');
     }
 }
