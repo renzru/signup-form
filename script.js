@@ -1,8 +1,8 @@
 let inputFields = document.querySelectorAll('input');
 
 inputFields.forEach(input => {
-    input.addEventListener('change', validateInput);
     input.addEventListener('focus', validateInput);
+    input.addEventListener('change', validateInput);
     input.addEventListener('blur', () => {
         validateInput;
         input.classList.remove('onFocus');

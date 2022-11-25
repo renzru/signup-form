@@ -53,6 +53,10 @@ $text-light: #909090;
                 color: $text-light
             }
 
+            .required::before{
+                content: "* ";
+                color: red;
+            }
             input {
                 margin-top: 0.25rem;
                 margin-bottom: 1.25rem;
@@ -60,6 +64,7 @@ $text-light: #909090;
                 height: 1.5rem;
                 background-color: #f4f4f4;
                 border: none;
+                outline: 1.25px transparent;
                 transition: all 0.1s ease-in-out, outline 0.25s ease-in-out;
             }
 
@@ -78,6 +83,10 @@ $text-light: #909090;
             }
 
             .invalidBlur {
+                outline: 1.25px solid #ff8c9b;
+            }
+
+            input:not(:required):focus:invalid {
                 outline: 1.25px solid #ff8c9b;
             }
         }

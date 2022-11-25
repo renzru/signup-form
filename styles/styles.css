@@ -42,6 +42,10 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
   font-weight: 200;
   color: #909090;
 }
+.form_content form .required::before {
+  content: "* ";
+  color: red;
+}
 .form_content form input {
   margin-top: 0.25rem;
   margin-bottom: 1.25rem;
@@ -49,6 +53,7 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
   height: 1.5rem;
   background-color: #f4f4f4;
   border: none;
+  outline: 1.25px transparent;
   transition: all 0.1s ease-in-out, outline 0.25s ease-in-out;
 }
 .form_content form input:focus {
@@ -63,6 +68,9 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
   outline: 1.25px solid #8cffc5;
 }
 .form_content form .invalidBlur {
+  outline: 1.25px solid #ff8c9b;
+}
+.form_content form input:not(:required):focus:invalid {
   outline: 1.25px solid #ff8c9b;
 }
 
