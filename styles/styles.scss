@@ -9,8 +9,8 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
 
 $text-color: #202020;
 $text-light: #909090;
-$accent: #5fbfc6;
-$accent-hover: #208087;
+$accent: #432dbe;
+$accent-hover: #1a0f6f;
 
 * {
     font-family: 'Inter', sans-serif;
@@ -34,7 +34,7 @@ $accent-hover: #208087;
     color: $text-color;
 
     &_header {
-            font-size: 2.5rem;
+        font-size: 2.5rem;
     }
 
     &_content {
@@ -43,7 +43,7 @@ $accent-hover: #208087;
             display: grid;
             grid-template: repeat(12, 0.5fr) / repeat(2, 1fr);
             column-gap: 0.5rem;
-            width: 50em;
+            width: 50rem;
 
             label {
                 font-weight: 500;
@@ -126,8 +126,12 @@ $accent-hover: #208087;
             }
 
             input[type="submit"]:active {
-                background-color: #15656b;
+                background-color: #100755;
             }
+
+            input[type="submit"]:valid {
+                outline: none;
+            } 
             
             .signin-text {
                 grid-row: 11;
@@ -148,8 +152,14 @@ $accent-hover: #208087;
     }
 }
 
+
 .background-image {
     width: 30%;
     height: 100%;
-    object-fit: cover;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
