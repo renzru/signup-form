@@ -25,7 +25,7 @@ $neur-gradient: linear-gradient($accent, $accent-hover);
     height: 100vh;
 }
 
-.form > * {
+.form>* {
     width: 100%;
 }
 
@@ -36,7 +36,8 @@ $neur-gradient: linear-gradient($accent, $accent-hover);
     align-items: center;
     width: 75%;
     height: 100%;
-    padding: 0 15rem;
+
+    padding: 0 10rem;
     color: $text-color;
 
     &_header {
@@ -53,16 +54,22 @@ $neur-gradient: linear-gradient($accent, $accent-hover);
             font-size: 2.7rem;
             font-weight: 200;
             color: $text-light;
+            white-space: nowrap;
         }
 
     }
 
     &_content {
+
         form {
             display: grid;
-            grid-template: repeat(12, 0.5fr) / repeat(2, 1fr);
-            column-gap: 0.5rem;
+            grid-template: repeat(6, 0.5fr) / repeat(2, 1fr);
+            column-gap: 2.5rem;
+            justify-items: start;
+            align-content: center;
             width: 100%;
+
+
 
             label {
                 font-weight: 500;
@@ -75,15 +82,21 @@ $neur-gradient: linear-gradient($accent, $accent-hover);
                 color: $text-light
             }
 
-            .required::before{
+            .required::before {
                 content: "* ";
                 color: red;
             }
 
+            .form_content--field {
+                width: 100%;
+            }
+
             input {
+                box-sizing: border-box;
                 margin-top: 0.25rem;
                 margin-bottom: 1.25rem;
-                padding: 0.25rem 0.5rem;
+                padding: 1rem 0.5rem;
+                width: 100%;
                 height: 1.5rem;
                 background-color: #f4f4f4;
                 border: none;
@@ -91,12 +104,30 @@ $neur-gradient: linear-gradient($accent, $accent-hover);
                 transition: all 0.1s ease-in-out, outline 0.25s ease-in-out;
             }
 
+            .email--label {
+                grid-row: 2 / 3;
+            }
+
             input[type="email"] {
+                grid-row: 3 / 4;
                 grid-column: span 2;
             }
 
+            .phone--label {
+                grid-row: 4 / 5;
+            }
+
             input[type="tel"] {
+                grid-row: 5 / 6;
                 grid-column: span 2;
+            }
+
+            .password {
+                grid-row: 6 / 7;
+            }
+
+            .confirm {
+                grid-row: 6 / 7;
             }
 
             input:focus {
@@ -131,7 +162,6 @@ $neur-gradient: linear-gradient($accent, $accent-hover);
     }
 
     &_footer {
-        margin-top: -5.25rem;
         input {
             width: 100%;
             height: 100%;
@@ -142,27 +172,26 @@ $neur-gradient: linear-gradient($accent, $accent-hover);
             outline: none;
             border-radius: 0.5rem;
         }
-    
+
         input:hover {
             background-color: $accent-hover;
         }
-    
+
         input:active {
             background-color: #100755;
         }
-    
+
         .signin-text {
-            grid-row: 11;
             color: $text-light;
         }
-    
+
         a {
             font-size: 1rem;
             font-weight: 600;
             color: $accent;
             text-decoration: none;
         }
-    
+
         a:hover {
             color: $accent-hover;
         }
@@ -179,5 +208,12 @@ $neur-gradient: linear-gradient($accent, $accent-hover);
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+}
+
+@media (max-width: 320px) {
+    .form form {
+        display: flex;
+        flex-direction: column;
     }
 }

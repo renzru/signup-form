@@ -23,21 +23,29 @@
             </div>
             <div class="form_content">
                 <form id="form">
-                    <label>FIRST NAME <span>e.g. John</span></label>
-                    <label>LAST NAME <span>e.g. Doe</span></label>
-                    <input type="text" placeholder="">
-                    <input type="text" placeholder="">
-                    <label>EMAIL<span class="required">email@address.com</span></label>
+                    <div class="form_content--field firstName">
+                        <label>FIRST NAME <span>e.g. John</span></label>
+                        <input type="text" placeholder="">
+                    </div>
+                    <div class="form_content--field lastName">
+                        <label>LAST NAME <span>e.g. Doe</span></label>
+                        <input type="text" placeholder="">
+                    </div>
+
+                    <label class="email--label">EMAIL<span class="required">email@address.com</span></label>
                     <input type="email" placeholder="" required>
-                    <label>PHONE <span>+1 (234) 567-8910</span></label>
+                    <label class="phone--label">PHONE <span>+1 (234) 567-8910</span></label>
                     <input type="tel" placeholder="">
-                    <label>PASSWORD<span class="required">min. 8 characters</span></label>
-                    <label>CONFIRM<span class="required">passwords must match</span></label>
-                    <input type="password" placeholder="" required>
-                    <input type="password" placeholder="" required>
+                    <div class="form_content--field password">
+                        <label>PASSWORD<span class="required">min. 8 characters</span></label>
+                        <input type="password" placeholder="" required>
+                    </div>
+                    <div class="form_content--field confirm">
+                        <label>CONFIRM<span class="required">passwords must match</span></label>
+                        <input type="password" placeholder="" required>
+                    </div>
                 </form>
                 </p>
-
             </div>
             <div class="form_footer">
                 <input type="submit" form="form" value="Create Account">

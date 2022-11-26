@@ -28,7 +28,7 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
   align-items: center;
   width: 75%;
   height: 100%;
-  padding: 0 15rem;
+  padding: 0 10rem;
   color: #202020;
 }
 .form_header {
@@ -44,12 +44,15 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
   font-size: 2.7rem;
   font-weight: 200;
   color: #909090;
+  white-space: nowrap;
 }
 .form_content form {
   display: grid;
-  grid-template: repeat(12, 0.5fr)/repeat(2, 1fr);
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
+  grid-template: repeat(6, 0.5fr)/repeat(2, 1fr);
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+  justify-items: start;
+  align-content: center;
   width: 100%;
 }
 .form_content form label {
@@ -65,21 +68,40 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
   content: "* ";
   color: red;
 }
+.form_content form .form_content--field {
+  width: 100%;
+}
 .form_content form input {
+  box-sizing: border-box;
   margin-top: 0.25rem;
   margin-bottom: 1.25rem;
-  padding: 0.25rem 0.5rem;
+  padding: 1rem 0.5rem;
+  width: 100%;
   height: 1.5rem;
   background-color: #f4f4f4;
   border: none;
   outline: 1.25px transparent;
   transition: all 0.1s ease-in-out, outline 0.25s ease-in-out;
 }
+.form_content form .email--label {
+  grid-row: 2/3;
+}
 .form_content form input[type=email] {
+  grid-row: 3/4;
   grid-column: span 2;
 }
+.form_content form .phone--label {
+  grid-row: 4/5;
+}
 .form_content form input[type=tel] {
+  grid-row: 5/6;
   grid-column: span 2;
+}
+.form_content form .password {
+  grid-row: 6/7;
+}
+.form_content form .confirm {
+  grid-row: 6/7;
 }
 .form_content form input:focus {
   transform: scale(1.025);
@@ -109,9 +131,6 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
 .form_content form input:focus:placeholder-shown {
   outline: 1.25px solid #432dbe;
 }
-.form_footer {
-  margin-top: -5.25rem;
-}
 .form_footer input {
   width: 100%;
   height: 100%;
@@ -129,7 +148,6 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
   background-color: #100755;
 }
 .form_footer .signin-text {
-  grid-row: 11;
   color: #909090;
 }
 .form_footer a {
@@ -152,4 +170,11 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (max-width: 320px) {
+  .form form {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=styles.css.map */
