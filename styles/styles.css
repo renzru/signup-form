@@ -30,8 +30,10 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
   font-size: 2.5rem;
 }
 .form_content form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template: repeat(10, 0.5fr)/repeat(2, 1fr);
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 .form_content form label {
   font-weight: 500;
@@ -56,9 +58,14 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
   outline: 1.25px transparent;
   transition: all 0.1s ease-in-out, outline 0.25s ease-in-out;
 }
+.form_content form input[type=email] {
+  grid-column: span 2;
+}
+.form_content form input[type=tel] {
+  grid-column: span 2;
+}
 .form_content form input:focus {
   transform: scale(1.025);
-  margin-bottom: 2.5rem;
   outline: 1.25px solid #8cd7ff;
 }
 .form_content form .onFocus {
@@ -70,7 +77,10 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
 .form_content form .invalidBlur {
   outline: 1.25px solid #ff8c9b;
 }
-.form_content form input:not(:required):focus:invalid {
+.form_content form input[required]:focus:valid {
+  outline: 1.25px solid #8cffc5;
+}
+.form_content form input:focus:invalid {
   outline: 1.25px solid #ff8c9b;
 }
 

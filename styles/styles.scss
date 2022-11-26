@@ -39,8 +39,9 @@ $text-light: #909090;
 
         form {
             // CONVERT THIS TO GRID
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template: repeat(10, 0.5fr) / repeat(2, 1fr);
+            column-gap: 0.5rem;
 
             label {
                 font-weight: 500;
@@ -57,6 +58,7 @@ $text-light: #909090;
                 content: "* ";
                 color: red;
             }
+
             input {
                 margin-top: 0.25rem;
                 margin-bottom: 1.25rem;
@@ -68,9 +70,15 @@ $text-light: #909090;
                 transition: all 0.1s ease-in-out, outline 0.25s ease-in-out;
             }
 
+            input[type="email"] {
+                grid-column: span 2;
+            }
+
+            input[type="tel"] {
+                grid-column: span 2;
+            }
             input:focus {
                 transform: scale(1.025);
-                margin-bottom: 2.5rem;
                 outline: 1.25px solid #8cd7ff;
             }
 
@@ -86,7 +94,11 @@ $text-light: #909090;
                 outline: 1.25px solid #ff8c9b;
             }
 
-            input:not(:required):focus:invalid {
+            input[required]:focus:valid {
+                outline: 1.25px solid #8cffc5;
+            }
+
+            input:focus:invalid {
                 outline: 1.25px solid #ff8c9b;
             }
         }
