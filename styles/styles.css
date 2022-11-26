@@ -77,11 +77,20 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
 .form_content form .invalidBlur {
   outline: 1.25px solid #ff8c9b;
 }
-.form_content form input[required]:focus:valid {
+.form_content form input:focus:valid {
   outline: 1.25px solid #8cffc5;
 }
 .form_content form input:focus:invalid {
   outline: 1.25px solid #ff8c9b;
+}
+.form_content form input:focus:-moz-placeholder-shown {
+  outline: 1.25px solid #8cd7ff;
+}
+.form_content form input:focus:-ms-input-placeholder {
+  outline: 1.25px solid #8cd7ff;
+}
+.form_content form input:focus:placeholder-shown {
+  outline: 1.25px solid #8cd7ff;
 }
 
 .background-image {

@@ -94,12 +94,16 @@ $text-light: #909090;
                 outline: 1.25px solid #ff8c9b;
             }
 
-            input[required]:focus:valid {
+            input:focus:valid {
                 outline: 1.25px solid #8cffc5;
             }
 
             input:focus:invalid {
                 outline: 1.25px solid #ff8c9b;
+            }
+
+            input:focus:placeholder-shown {
+                outline: 1.25px solid #8cd7ff;
             }
         }
     }
