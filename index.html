@@ -14,6 +14,7 @@
 <body>
     <div class="main">
         <div class="background-image">
+            <h1>Neur</h1>
             <img src="./images/gradient.gif">
         </div>
         <div class="form">
@@ -31,21 +32,19 @@
                         <label>LAST NAME <span>e.g. Doe</span></label>
                         <input type="text" placeholder="">
                     </div>
-
                     <label class="email--label">EMAIL<span class="required">email@address.com</span></label>
                     <input type="email" placeholder="" required>
                     <label class="phone--label">PHONE <span>+1 (234) 567-8910</span></label>
                     <input type="tel" placeholder="">
                     <div class="form_content--field password">
                         <label>PASSWORD<span class="required">min. 8 characters</span></label>
-                        <input type="password" placeholder="" required>
+                        <input type="password" minlength="8" placeholder="" required>
                     </div>
                     <div class="form_content--field confirm">
                         <label>CONFIRM<span class="required">passwords must match</span></label>
-                        <input type="password" placeholder="" required>
+                        <input type="password" minlength="8" placeholder="" required>
                     </div>
                 </form>
-                </p>
             </div>
             <div class="form_footer">
                 <input type="submit" form="form" value="Create Account">
