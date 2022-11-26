@@ -9,6 +9,8 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
 
 $text-color: #202020;
 $text-light: #909090;
+$accent: #5fbfc6;
+$accent-hover: #208087;
 
 * {
     font-family: 'Inter', sans-serif;
@@ -38,10 +40,10 @@ $text-light: #909090;
     &_content {
 
         form {
-            // CONVERT THIS TO GRID
             display: grid;
-            grid-template: repeat(10, 0.5fr) / repeat(2, 1fr);
+            grid-template: repeat(12, 0.5fr) / repeat(2, 1fr);
             column-gap: 0.5rem;
+            width: 50em;
 
             label {
                 font-weight: 500;
@@ -77,6 +79,7 @@ $text-light: #909090;
             input[type="tel"] {
                 grid-column: span 2;
             }
+
             input:focus {
                 transform: scale(1.025);
                 outline: 1.25px solid #8cd7ff;
@@ -105,9 +108,44 @@ $text-light: #909090;
             input:focus:placeholder-shown {
                 outline: 1.25px solid #8cd7ff;
             }
+            
+            input[type="submit"] {
+                grid-column: span 2;
+                grid-row: 9 / 10;
+                height: 150%;
+                font-weight: 600;
+                color: white;
+                background-color: $accent;
+                border: none;
+                outline: none;
+                border-radius: 0.5rem;
+            }
+
+            input[type="submit"]:hover {
+                background-color: $accent-hover;
+            }
+
+            input[type="submit"]:active {
+                background-color: #15656b;
+            }
+            
+            .signin-text {
+                grid-row: 11;
+                color: $text-light;
+            }
+
+            a {
+                font-size: 1rem;
+                font-weight: 600;
+                color: $accent;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: $accent-hover;
+            }
         }
     }
-
 }
 
 .background-image {

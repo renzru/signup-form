@@ -31,9 +31,10 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
 }
 .form_content form {
   display: grid;
-  grid-template: repeat(10, 0.5fr)/repeat(2, 1fr);
+  grid-template: repeat(12, 0.5fr)/repeat(2, 1fr);
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
+  width: 50em;
 }
 .form_content form label {
   font-weight: 500;
@@ -91,6 +92,36 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
 }
 .form_content form input:focus:placeholder-shown {
   outline: 1.25px solid #8cd7ff;
+}
+.form_content form input[type=submit] {
+  grid-column: span 2;
+  grid-row: 9/10;
+  height: 150%;
+  font-weight: 600;
+  color: white;
+  background-color: #5fbfc6;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+}
+.form_content form input[type=submit]:hover {
+  background-color: #208087;
+}
+.form_content form input[type=submit]:active {
+  background-color: #15656b;
+}
+.form_content form .signin-text {
+  grid-row: 11;
+  color: #909090;
+}
+.form_content form a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #5fbfc6;
+  text-decoration: none;
+}
+.form_content form a:hover {
+  color: #208087;
 }
 
 .background-image {
