@@ -12,44 +12,41 @@
 </head>
 
 <body>
-    <div class="main">
-        <div class="background-image">
+    <div class="background-image">
+        <img src="./images/gradient.gif">
+    </div>
+    <div class="form">
+        <div class="form_header">
             <h1>Neur</h1>
-            <img src="./images/gradient.gif">
+            <p>The next generation of machine learning</p>
         </div>
-        <div class="form">
-            <div class="form_header">
-                <h1>Neur</h1>
-                <p>The next generation of machine learning</p>
-            </div>
-            <div class="form_content">
-                <form id="form">
-                    <div class="form_content--field firstName">
-                        <label>FIRST NAME <span>e.g. John</span></label>
-                        <input type="text" placeholder="">
-                    </div>
-                    <div class="form_content--field lastName">
-                        <label>LAST NAME <span>e.g. Doe</span></label>
-                        <input type="text" placeholder="">
-                    </div>
-                    <label class="email--label">EMAIL<span class="required">email@address.com</span></label>
-                    <input type="email" placeholder="" required>
-                    <label class="phone--label">PHONE <span>+1 (234) 567-8910</span></label>
-                    <input type="tel" placeholder="">
-                    <div class="form_content--field password">
-                        <label>PASSWORD<span class="required">min. 8 characters</span></label>
-                        <input type="password" minlength="8" placeholder="" required>
-                    </div>
-                    <div class="form_content--field confirm">
-                        <label>CONFIRM<span class="required">passwords must match</span></label>
-                        <input type="password" minlength="8" placeholder="" required>
-                    </div>
-                </form>
-            </div>
-            <div class="form_footer">
-                <input type="submit" form="form" value="Create Account">
-                <p class="signin-text">Already have an account? <a href="#">Sign In</a>
-            </div>
+        <div class="form_content">
+            <form id="form">
+                <div class="form_content--field firstName">
+                    <label>FIRST NAME <span>e.g. John</span></label>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="form_content--field lastName">
+                    <label>LAST NAME <span>e.g. Doe</span></label>
+                    <input type="text" placeholder="">
+                </div>
+                <label class="email--label">EMAIL<span class="required">email@address.com</span></label>
+                <input type="email" placeholder="" required>
+                <label class="phone--label">PHONE <span>+1 (234) 567-8910</span></label>
+                <input type="tel" placeholder="">
+                <div class="form_content--field password">
+                    <label>PASSWORD<span class="required">min. 8 characters</span></label>
+                    <input type="password" minlength="8" placeholder="" required>
+                </div>
+                <div class="form_content--field confirm">
+                    <label>CONFIRM<span class="required">passwords must match</span></label>
+                    <input type="password" minlength="8" placeholder="" required>
+                </div>
+            </form>
+        </div>
+        <div class="form_footer">
+            <input type="submit" form="form" value="Create Account">
+            <p class="signin-text">Already have an account? <a href="#">Sign In</a>
         </div>
     </div>
     <script src="./script.js" async defer></script>
