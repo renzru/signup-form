@@ -162,7 +162,7 @@ $neur-gradient: linear-gradient($accent, $accent-hover);
     }
 
     &_footer {
-        margin-top: 2.5rem;
+        margin: 2.5rem 0;
 
         input {
             width: 100%;
@@ -225,6 +225,7 @@ $neur-gradient: linear-gradient($accent, $accent-hover);
 
 @media (max-width: 430px) {
 
+    html,
     body {
         overflow-x: hidden;
     }
@@ -236,6 +237,7 @@ $neur-gradient: linear-gradient($accent, $accent-hover);
     .background-image {
         width: 100%;
         height: 20%;
+        margin-bottom: 2.25rem;
 
         img {
             width: 75%;
@@ -245,12 +247,10 @@ $neur-gradient: linear-gradient($accent, $accent-hover);
     .form {
 
         &_header {
-            margin-top: 1.5rem;
             text-align: center;
         }
 
         &_content {
-
             form {
                 display: flex;
                 flex-direction: column;
@@ -261,8 +261,6 @@ $neur-gradient: linear-gradient($accent, $accent-hover);
             p {
                 text-align: center;
             }
-
-            margin-bottom: 5rem;
         }
     }
 }
