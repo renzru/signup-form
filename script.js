@@ -1,4 +1,7 @@
 let inputFields = document.querySelectorAll('input');
+let passwordFields = document.querySelectorAll('input[type="password"');
+
+
 
 inputFields.forEach(input => {
     input.addEventListener('focus', validateInput);
@@ -8,7 +11,6 @@ inputFields.forEach(input => {
         input.classList.remove('onFocus');
     });
 });
-
 
 function validateInput() {
     let inputLength = this.value.trim().length;

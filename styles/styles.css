@@ -186,6 +186,9 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
 }
 
 @media (max-width: 430px) {
+  body {
+    overflow-x: hidden;
+  }
   .main {
     flex-direction: column;
   }
@@ -193,26 +196,12 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
     width: 100%;
     height: 20%;
   }
-  .background-image h1 {
-    opacity: 1;
-    z-index: 2;
-    color: white;
-    font-size: 5rem;
-    text-align: center;
-    line-height: 0;
+  .background-image img {
+    width: 75%;
   }
   .form_header {
-    margin-bottom: -2.5rem;
+    margin-top: 1.5rem;
     text-align: center;
-  }
-  .form_header h1 {
-    display: none;
-  }
-  .form_header p {
-    opacity: 0;
-  }
-  .form_content {
-    margin-top: 2.5rem;
   }
   .form_content form {
     display: flex;
@@ -223,10 +212,5 @@ BG: https://unsplash.com/photos/HD7E0qHS7mc
   }
   .form_footer p {
     text-align: center;
-  }
-}
-@media (max-width: 361px) {
-  .background-image {
-    height: 15%;
   }
 }/*# sourceMappingURL=styles.css.map */
